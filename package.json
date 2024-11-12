@@ -1,0 +1,19 @@
+{
+  "name": "faker-demo",
+  "version": "1.0.0",
+  "description": "Demo project using Faker.js to generate realistic test data",
+  "main": "index.js",
+  "scripts": {
+    "init-db": "node src/scripts/init-db.js",
+    "seed": "node src/seeds/seed-database.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@faker-js/faker": "^8.0.0",
+    "pg": "^8.11.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.32.0"
+  }
+}

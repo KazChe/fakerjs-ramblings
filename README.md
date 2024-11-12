@@ -21,50 +21,71 @@ faker.js is a powerful library that helps you generate massive amount of real-li
 ## Setup
 
 1. Install dependencies:
+
 ```bash
 npm install
 ```
 
-2. Start PostgreSQL:
+2. Start PostgreSQL using Docker:
+
 ```bash
 docker-compose up -d
 ```
 
-3. Run seeds:
+3. Initialize the database schema:
+
 ```bash
-# Run all seeds
+npm run init-db
+```
+
+4. Run seeds (includes standard, large dataset,international users)
+
+```bash
+# run all seeds (includes standard, large dataset, and international users)
 npm run seed
 
-# Run specific seeds
-npm run seed:large      # For large dataset
-npm run seed:international  # For international users
-```
+
+5. Verify the seeded data:
+- Connect to PostgreSQL using your preferred client
+- Connection details:
+  - Host: localhost
+  - Port: 5432
+  - Database: faker_demo
+  - Username: faker_user
+  - Password: faker_password
+
+Note: Make sure you have Docker installed on your system before starting. The database will be automatically configured with the correct user, password, and database name as specified in the docker-compose.yml file.
 
 ## Advanced Seeding Patterns
 
 ### 1. Relationships and Foreign Keys
+
 - Company-Employee relationships with UUID references
 - Product-Manufacturer relationships
 - Maintains referential integrity across tables
 
 ### 2. Custom Generators
+
 - Project status generators
 - Sprint number formatting
 - Weighted ticket priorities
 - Business-specific data patterns
 
 ### 3. Batch Processing
+
 - Efficient handling of large datasets
 - Progress tracking
 - Memory-efficient operations
 - Uses `faker.helpers.multiple()` for better performance
 
 ### 4. Locale Support
+
 - Multi-language data generation
 - Region-specific formatting
 - Supports: en, es, fr, de, ja
 
 ### 5. Consistent Test Data
+
 - Fixed seeds for reproducible results
 - Predictable test scenarios
 - Maintains data integrity
@@ -80,10 +101,12 @@ npm run seed:international  # For international users
 ## Best Practices
 
 1. **Seed Data Consistency**
+
    - Use fixed seeds for reproducible results
    - Maintain referential integrity
 
 2. **Performance Considerations**
+
    - Use batch inserts for large datasets
    - Consider using streams for very large datasets
    - Cache repeated random generations
@@ -99,6 +122,7 @@ npm run seed:international  # For international users
 ```
 
 ```
+
 faker-demo/
 ├── docker-compose.yml
 ├── package.json
@@ -116,5 +140,7 @@ faker-demo/
 │ └── utils/
 │ └── faker-helpers.js
 └── README.md
+
 ```
 
+```

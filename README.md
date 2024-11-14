@@ -87,6 +87,7 @@ npm run seed
 ```
 
 5. Verify the seeded data:
+
 - Connect to PostgreSQL using your preferred client
 - Connection details:
   - Host: localhost
@@ -161,9 +162,6 @@ Note: Make sure you have Docker installed on your system before starting. The da
 ## Project Structure
 
 ```
-
-```
-
 faker-demo/
 ├── docker-compose.yml
 ├── package.json
@@ -181,7 +179,4 @@ faker-demo/
 │ └── utils/
 │ └── faker-helpers.js
 └── README.md
-
-```
-
 ```

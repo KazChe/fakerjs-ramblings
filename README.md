@@ -1,6 +1,6 @@
 # Faker.js Database Seeding Demo
 
-This project demonstrates how to use [faker.js](https://fakerjs.dev/) to populate a postgres database with realistic test data.
+This project demonstrates how to use [faker.js](https://fakerjs.dev/) to populate a postgres database with realistic test data. 
 
 ## Introduction
 
@@ -15,6 +15,7 @@ faker.js is a powerful library that helps you generate massive amount of real-li
 - Helps avoid manual data entry for testing
 
 ## In this demo will setup the following schema:
+The schema is designed to support wide range of use cases, from user profiles to e-commerce product catalogs.  
 
 ```sql
 CREATE TABLE "Companies" (
@@ -180,3 +181,5 @@ faker-demo/
 │ └── faker-helpers.js
 └── README.md
 ```
+### Blog post on hashnode: 
+[Faker.js to Populate Your Database with Realistic Test Data](https://kamc.hashnode.dev/fakerjs-to-populate-your-database-with-realistic-test-data)
